@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class XMLOutputStrategy implements OutputStrategy {
+public class XMLOutputVisitor implements OutputVisitor {
     @Override
     public String getElement(KeyValuePair keyValuePair) {
         StringBuilder builder = new StringBuilder("<" + keyValuePair.getName());

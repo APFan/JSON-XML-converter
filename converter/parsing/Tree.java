@@ -1,6 +1,6 @@
 package converter.parsing;
 
-import converter.printing.OutputStrategy;
+import converter.printing.OutputVisitor;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ public class Tree {
         this.elements = elements;
     }
 
-    public String getRepresentation(OutputStrategy strategy) {
+    public String getRepresentation(OutputVisitor strategy) {
         return strategy.getElement(this);
     }
 

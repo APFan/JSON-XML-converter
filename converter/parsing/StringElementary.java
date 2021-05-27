@@ -1,6 +1,6 @@
 package converter.parsing;
 
-import converter.printing.OutputStrategy;
+import converter.printing.OutputVisitor;
 
 public class StringElementary implements Obj {
     private final String value;
@@ -10,7 +10,7 @@ public class StringElementary implements Obj {
     }
 
     @Override
-    public String getOutput(OutputStrategy strategy) {
+    public String getOutput(OutputVisitor strategy) {
         return strategy.getElement(this);
     }
 
