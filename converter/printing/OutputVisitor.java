@@ -4,7 +4,7 @@ import converter.parsing.*;
 
 import java.util.Map;
 
-public interface OutputStrategy {
+public interface OutputVisitor {
     String getElement(KeyValuePair keyValuePair);
     String getElement(NullElementary elementary);
     String getElement(StringElementary elementary);

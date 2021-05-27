@@ -1,7 +1,7 @@
 package converter.parsing;
 
-import converter.printing.OutputStrategy;
+import converter.printing.OutputVisitor;
 
 public interface Obj {
-    String getOutput(OutputStrategy strategy);
+    String getOutput(OutputVisitor strategy);
 }

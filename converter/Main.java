@@ -1,8 +1,8 @@
 package converter;
 
 import converter.parsing.*;
-import converter.printing.JsonOutputStrategy;
-import converter.printing.XMLOutputStrategy;
+import converter.printing.JsonOutputVisitor;
+import converter.printing.XMLOutputVisitor;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -19,10 +19,10 @@ public class Main {
                     if (input.length() != 0) {
                         if (input.charAt(0) == '<') {
                             Tree tree = new XMLParser(input).getTree();
-                            System.out.println(tree.getRepresentation(new JsonOutputStrategy()));
+                            System.out.println(tree.getRepresentation(new JsonOutputVisitor()));
                         } else {
                             Tree tree = new JsonParser(input).getTree();
-                            System.out.println(tree.getRepresentation(new XMLOutputStrategy()));
+                            System.out.println(tree.getRepresentation(new XMLOutputVisitor()));
                         }
                     } else {
                         System.out.println("Empty file!");

@@ -5,7 +5,7 @@ import converter.parsing.*;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class JsonOutputStrategy implements OutputStrategy {
+public class JsonOutputVisitor implements OutputVisitor {
     @Override
     public String getElement(KeyValuePair keyValuePair) {
         return "\"" + keyValuePair.getName() + "\" : " +

@@ -1,6 +1,6 @@
 package converter.parsing;
 
-import converter.printing.OutputStrategy;
+import converter.printing.OutputVisitor;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class PairListObj implements Obj {
     }
 
     @Override
-    public String getOutput(OutputStrategy strategy) {
+    public String getOutput(OutputVisitor strategy) {
         return strategy.getElement(this);
     }
 

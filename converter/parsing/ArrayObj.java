@@ -1,6 +1,6 @@
 package converter.parsing;
 
-import converter.printing.OutputStrategy;
+import converter.printing.OutputVisitor;
 
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ public class ArrayObj implements Obj {
     }
 
     @Override
-    public String getOutput(OutputStrategy strategy) {
+    public String getOutput(OutputVisitor strategy) {
         return strategy.getElement(this);
     }
 
